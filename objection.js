@@ -122,83 +122,137 @@ let employees = [
 
 let students = [
   {
-    name: 'Сэд-Эрдэнэ',
+    name: "Сэд-Эрдэнэ",
     age: 19,
-    gender: 'male',
+    gender: "male",
     points: 70,
   },
   {
-    name: 'Индра',
+    name: "Индра",
     age: 19,
-    gender: 'female',
+    gender: "female",
     points: 50,
   },
   {
-    name: 'Хатнаа ',
+    name: "Хатнаа ",
     age: 21,
-    gender: 'male',
+    gender: "male",
     points: 99,
   },
   {
-    name: 'Тэмүүлэн',
+    name: "Тэмүүлэн",
     age: 23,
-    gender: 'male',
+    gender: "male",
     points: 55,
   },
   {
-    name: 'Намуун',
+    name: "Намуун",
     age: 23,
-    gender: 'female',
+    gender: "female",
     points: 85,
   },
 ];
 
-let student1 = 0; 
+let student1 = 0;
 
-for ( i = 0 ; i < students.length; i++ ) {
+console.log("object-1:", students[0]);
 
-} console.log('object-1:', students[0] ) 
+let male = 0;
 
-let male = 0; 
-
-for (i = 0 ; i < students.length; i++) {
-  if ( students[i].gender === 'male') {
-    male = male + 1; 
+for (let i = 0; i < students.length; i++) {
+  if (students[i].gender === "male") {
+    male = male + 1;
   }
-   
-} console.log( 'male:', male);
+}
+
+console.log("male:", male);
 
 let female = 0;
 
-for (i = 0; i < students.length; i++) {
-  if ('female' === students[i].gender) {
-    female = female + 1 ;
-  } 
-} console.log ('female:', female) ;
+for (let i = 0; i < students.length; i++) {
+  if ("female" === students[i].gender) {
+    female = female + 1;
+  }
+}
 
-let avarage = 0 ;
-let avarageAge = 0 ;
-for (i = 0 ; i < students.length; i++) {
-    avarage = avarage + students[i].age ; 
-    avarageAge = avarage / students[i] ;
-  } console.log('total age:', students.length ) ;
-    console.log('avarage age:', avarage) ; 
-    console.log ('dundaj nas :',avarageAge) ;
+console.log("female:", female);
 
-let openbeer = [0]; 
+let sum = 0;
+let avarageAge = 0;
+for (let i = 0; i < students.length; i++) {
+  sum = sum + students[i].age;
+  // avarageAge = avarage / students[i];
+}
 
-for (i = 0 ; i < students.length; i++) {
-if ( students[i].age >= 21 ) {
-  openbeer = openbeer + students[i] ;
-  } 
-} console.log ('openbeer:', openbeer);
+avarageAge = sum / students.length;
+console.log("total age:", sum); // 5
+console.log("avarage age:", avarageAge);
 
+let score = 0;
 
+for (let i = 0; i < students.length; i++) {
+  if (students[i].points <= 60) {
+    score++;
+  }
+}
+console.log("over 60:", score);
 
+let femalepoints = 0;
+
+for (let i = 0; i < students.length; i++) {
+  if (students[i].gender === "female" && students[i].age <= 21) {
+    femalepoints = femalepoints + students[i].points;
+  }
+}
+console.log("sad;", femalepoints);
+
+let malePoints = 0;
+
+for (let i = 0; i < students.length; i++) {
+  if (students[i].gender === "male" && students[i].age <= 21) {
+    malePoints = malePoints + students[i].points;
+  }
+}
+console.log("das;", malePoints);
+
+let malePoints2 = 0;
+
+for (let i = 0; i < students.length; i++) {
+  if (students[i].gender === "male" && students[i].age >= 21) {
+    malePoints2 = malePoints2 + students[i].points;
+  }
+}
+console.log("asda;", malePoints2);
 
 // 1. Өгөгдсөн array-гаас эхний объектыг хэвлэж гаргах
 // 2. Ангид хэдэн эрэгтэй, эмэгтэй сурагч байгааг ол.
 // 3. Сурагчдын насны дунджийг олох функц бичих
 // 4. Нас нь 21-ээс дээш буюу тэнцүү сурагчдыг ол
 // 5. 60-аас дээш оноо авсан cурагчдийг тоол
+// 5. 21-аас доош настай эмэгтэй сурагчдын оноо авсан cурагчдийг тоол
 
+// 6. 21-аас дttш настай эмэгтэй сурагчдын оноо авсан cурагчдийг тоол
+// 7. 21-аас доош настай эрэгтэй сурагчдын оноо авсан cурагчдийг тоол
+// 8. 21-аас дttш настай эрэгтэй сурагчдын оноо авсан cурагчдийг тоол
+let oddcount = 0;
+for (let i = 0; i < 142; i++) {
+  // console.log("", i);
+  let too = i;
+}
+while (too !== 0) {
+  let digit = too % 10;
+  if (digit % 2 === 1) {
+    oddcount++;
+  }
+  too = (too - digit) / 10;
+}
+console.log("odd", oddcount);
+
+let a1 = [1, 2, 3, 4, 5];
+let b1 = [];
+let j = 0;
+for (let i = a1.length - 1; i >= 0; i--) {
+  console.log(a[i]);
+  b1[j] = a1[i];
+}
+j++;

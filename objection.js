@@ -252,7 +252,16 @@ let a1 = [1, 2, 3, 4, 5];
 let b1 = [];
 let j = 0;
 for (let i = a1.length - 1; i >= 0; i--) {
-  console.log(a[i]);
+  console.log(a1[i]);
   b1[j] = a1[i];
 }
 j++;
+
+let a2 = [7, 8, 9];
+let b2 = [];
+j = 0;
+
+for (let i = a2.length - 1; i >= 0; i--) {
+  console.log(a2[i]);
+  b2[j] = a2[i];
+} j++;

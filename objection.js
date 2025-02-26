@@ -264,4 +264,134 @@ j = 0;
 for (let i = a2.length - 1; i >= 0; i--) {
   console.log(a2[i]);
   b2[j] = a2[i];
-} j++;
+}
+j++;
+
+let products = [
+  { name: "Гурил", price: 1500, quantity: 5 },
+
+  { name: "Сүү", price: 3500, quantity: 2 },
+
+  { name: "Өндөг", price: 500, quantity: 30 },
+
+  { name: "Талх", price: 2000, quantity: 4 },
+
+  { name: "Цагаан будаа", price: 4000, quantity: 3 },
+
+  { name: "Элсэн чихэр", price: 3000, quantity: 2 },
+
+  { name: "Давс", price: 1000, quantity: 1 },
+
+  { name: "Цай", price: 5000, quantity: 2 },
+
+  { name: "Самар", price: 8000, quantity: 1 },
+
+  { name: "Жимс", price: 6000, quantity: 5 },
+
+  { name: "Ногоо", price: 2500, quantity: 7 },
+
+  { name: "Шоколад", price: 7000, quantity: 3 },
+];
+
+let goods = 0;
+
+for (let i = 0; i < products.length; i++) {
+  console.log("goods:", products[i].name);
+}
+
+let sumgoods = 0;
+
+for (let i = 0; i < products.length; i++) {
+  sumgoods = sumgoods + products.length;
+}
+console.log("sum;", sumgoods);
+
+let sumprice = 0;
+for (let i = 0; i < products.length; i++) {
+  sumprice = sumprice + products[i].price;
+}
+console.log("sumprice:", sumprice);
+
+let overprice = 0;
+
+for (let i = 0; i < products.length; i++) {
+  if (products[i].price >= 3000) {
+    console.log("overprice:", products[i].name, products[i].price);
+  }
+}
+
+let cheapestGoods = 0;
+
+for (let i = 0; i < products.length; i++) {
+  if (products[i].price <= 1500) {
+    cheapestGoods++;
+    console.log("cheapproducts:", cheapestGoods, products[i].name);
+  }
+}
+
+let lessQuantity = 0;
+
+for (let i = 0; i < products.length; i++) {
+  if (products[i].quantity < 5) {
+    lessQuantity++;
+  }
+  console.log({ lessQuantity }, products[i].name, products[i].quantity);
+}
+
+let maxQuantity = products[0];
+
+for (let i = 1; i < products.length; i++) {
+  if (maxQuantity.quantity < products[i].quantity) {
+    maxQuantity = products[i];
+  }
+}
+console.log("max, min:", maxQuantity);
+
+let x = "Өндөг";
+for (let i = 0; i < products.length; i++) {
+  if (products[i] === x) {
+    x = products[i];
+    // } else products[i] === x;
+    // console.log("iim buteegdhuun baihgui");
+  }
+}
+console.log("x:", x);
+
+let mass = [5, 7, 2, 3, 4];
+let mass2 = [6, 8, 3, 4, 5];
+let ret = 0;
+
+// for (i = mass.length - 1; i >= mass.length; i--) {
+//   console.log(mass[i]);
+// }
+
+// {
+//   console.log(mass2[i]);
+//   mass[j] = mass2[i];
+// }
+// j++;
+
+const printName = (list) => {
+  for (let i = 0; i < list.length; i++) {
+    console.log(list[i].name);
+  }
+};
+
+printName(products);
+
+// const printSum = (list) => {
+//   let asd = 0;
+//   for (let i = 0; i < list.length; i++) {
+//     asd = asd + list[i];
+//     console.log(list[i].quantity);
+//   }
+// };
+
+// 1. Өгөгдсөн бүтээгдэхүүний нэрийг хэвлэ.`
+// 2. Өгөгдсөн бүтээгдэхүүний нийт тоо ширхэгийг ол
+// 3. Өгөгдсөн бүтээгдэхүүний нийт үнийн дүнг ол
+// 4. Өгөгдсөн бүтээгдэхүүний 3000₮-өөс дээш үнэтэй бүтээгдэхүүнүүдийг хэвлэ
+// 5. Өгөгдсөн бүтээгдэхүүний хамгийн хямд бүтээгдэхүүний нэрийг олж хэвлэ
+// 6. Өгөгдсөн бүтээгдэхүүний  хамгийн их тоо ширхэгтэй бүтээгдэхүүнийг хэвлэ
+// 7. Өгөгдсөн бүтээгдэхүүний 5-аас доош үлдсэн бүтээгдэхүүнүүдийг жагсаах
+// 8. Өгөгдсөн бүтээгдэхүүн дотор X бүтээгдэхүүн  байгаа эсэхийг шаалга байвал мэдээллийг нь хэвлэ

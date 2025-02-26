@@ -298,13 +298,33 @@ let goods = 0;
 for (let i = 0; i < products.length; i++) {
   console.log("goods:", products[i].name);
 }
+// function printProductNames(productsList) {
+//   for (let i = 0; i < productsList.length; i++) {
+//     goods = goods + productsList.name
+//     console.log("goods:", productsList[i].name);
+//   }
+// return goods;
+// }
+
+// printProductNames(products);
+
 
 let sumgoods = 0;
 
 for (let i = 0; i < products.length; i++) {
-  sumgoods = sumgoods + products.length;
+  sumgoods = sumgoods + products[i].quantity;
 }
 console.log("sum;", sumgoods);
+
+// function printSum (products) {
+//   let sumgoods = 0;
+//   for (let i = 0; i < products.length; i++)
+//   sumgoods += products[i].quantity;
+//   console.log('ss', sumgoods);
+//   return sumgoods;
+// }
+// printSum(products)
+
 
 let sumprice = 0;
 for (let i = 0; i < products.length; i++) {
@@ -351,8 +371,11 @@ let x = "Өндөг";
 for (let i = 0; i < products.length; i++) {
   if (products[i] === x) {
     x = products[i];
-    // } else products[i] === x;
-    // console.log("iim buteegdhuun baihgui");
+    console.log ('x', x)
+  }
+    else { 
+    console.log("iim buteegdhuun baihgui"); 
+
   }
 }
 console.log("x:", x);
@@ -360,32 +383,47 @@ console.log("x:", x);
 let mass = [5, 7, 2, 3, 4];
 let mass2 = [6, 8, 3, 4, 5];
 let ret = 0;
+let j1 = 0;
+for (i = mass.length - 1; i >= 0 ; i--) {
+  console.log(mass[i]);
+  console.log(mass2[i]);
+  j1++;
+  mass[j1] = mass2[i];
+  console.log('mass:', mass); 
+}
 
-// for (i = mass.length - 1; i >= mass.length; i--) {
-//   console.log(mass[i]);
-// }
 
-// {
-//   console.log(mass2[i]);
-//   mass[j] = mass2[i];
-// }
-// j++;
+let set = [5, 7, 2, 3, 4];
+let set2 = [6, 8, 3, 4, 5];
+let commonElements = [];
 
-const printName = (list) => {
-  for (let i = 0; i < list.length; i++) {
-    console.log(list[i].name);
+
+for (let i = 0; i < set2.length; i++) {
+  if (set[i] !== set2[i]) {
+    console.log('new set:', commonElements)
+    commonElements = commonElements + set2[i];
   }
-};
+}
 
-printName(products);
+for (let r = 0 ; r < set2.length; r++) {
+  for (let c = 0 ; c < set2.length; c++) {
+    console.log(commonElements[r][c]);
+    
+  }
+}
+
+
+
 
 // const printSum = (list) => {
 //   let asd = 0;
 //   for (let i = 0; i < list.length; i++) {
-//     asd = asd + list[i];
-//     console.log(list[i].quantity);
+//     asd = asd + list[i].quantity;
+//     console.log('ads', asd, list[i].quantity);
 //   }
-// };
+//   return asd; 
+// }; 
+// printSum(products)
 
 // 1. Өгөгдсөн бүтээгдэхүүний нэрийг хэвлэ.`
 // 2. Өгөгдсөн бүтээгдэхүүний нийт тоо ширхэгийг ол

@@ -308,7 +308,6 @@ for (let i = 0; i < products.length; i++) {
 
 // printProductNames(products);
 
-
 let sumgoods = 0;
 
 for (let i = 0; i < products.length; i++) {
@@ -324,7 +323,6 @@ console.log("sum;", sumgoods);
 //   return sumgoods;
 // }
 // printSum(products)
-
 
 let sumprice = 0;
 for (let i = 0; i < products.length; i++) {
@@ -371,11 +369,9 @@ let x = "Өндөг";
 for (let i = 0; i < products.length; i++) {
   if (products[i] === x) {
     x = products[i];
-    console.log ('x', x)
-  }
-    else { 
-    console.log("iim buteegdhuun baihgui"); 
-
+    console.log("x", x);
+  } else {
+    console.log("iim buteegdhuun baihgui");
   }
 }
 console.log("x:", x);
@@ -384,36 +380,32 @@ let mass = [5, 7, 2, 3, 4];
 let mass2 = [6, 8, 3, 4, 5];
 let ret = 0;
 let j1 = 0;
-for (i = mass.length - 1; i >= 0 ; i--) {
+for (i = mass.length - 1; i >= 0; i--) {
   console.log(mass[i]);
   console.log(mass2[i]);
   j1++;
   mass[j1] = mass2[i];
-  console.log('mass:', mass); 
+  console.log("mass:", mass);
 }
-
 
 let set = [5, 7, 2, 3, 4];
 let set2 = [6, 8, 3, 4, 5];
 let commonElements = [];
 
-
 for (let i = 0; i < set2.length; i++) {
   if (set[i] !== set2[i]) {
-    console.log('new set:', commonElements)
-    commonElements = commonElements + set2[i];
+    commonElements[j] = set[i];
+    j++;
   }
 }
+console.log("new set:", commonElements);
 
-for (let r = 0 ; r < set2.length; r++) {
-  for (let c = 0 ; c < set2.length; c++) {
-    console.log(commonElements[r][c]);
-    
-  }
-}
-
-
-
+// for (let r = 0; r < set2.length; r++) {
+//   for (let c = 0; c < set2.length; c++) {
+//     commonElements[j] = set2[i];
+//     j++;
+//   }
+// } console.log(commonElements[r][c]);
 
 // const printSum = (list) => {
 //   let asd = 0;
@@ -421,8 +413,8 @@ for (let r = 0 ; r < set2.length; r++) {
 //     asd = asd + list[i].quantity;
 //     console.log('ads', asd, list[i].quantity);
 //   }
-//   return asd; 
-// }; 
+//   return asd;
+// };
 // printSum(products)
 
 // 1. Өгөгдсөн бүтээгдэхүүний нэрийг хэвлэ.`
@@ -433,3 +425,21 @@ for (let r = 0 ; r < set2.length; r++) {
 // 6. Өгөгдсөн бүтээгдэхүүний  хамгийн их тоо ширхэгтэй бүтээгдэхүүнийг хэвлэ
 // 7. Өгөгдсөн бүтээгдэхүүний 5-аас доош үлдсэн бүтээгдэхүүнүүдийг жагсаах
 // 8. Өгөгдсөн бүтээгдэхүүн дотор X бүтээгдэхүүн  байгаа эсэхийг шаалга байвал мэдээллийг нь хэвлэ
+
+// function great(name) {
+//   console.log("hello there" + name + ":)");
+// }
+
+// // let input = prompt("enter a name" + "");
+
+// great(input); //function -iig duudaj ajilluulah
+
+// function square(num) {
+//   return num * num;
+// }
+// var result = square(3);
+// console.log(result);
+
+function add(a, b) {
+  console.log(a + b);
+}

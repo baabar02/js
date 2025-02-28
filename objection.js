@@ -332,22 +332,6 @@ for (let i = 0; i < products.length; i++) {
 }
 console.log("sumprice:", sumprice);
 
-let overprice = 0;
-
-for (let i = 0; i < products.length; i++) {
-  if (products[i].price >= 3000) {
-    console.log("overprice:", products[i].name, products[i].price);
-  }
-}
-
-let cheapestGoods = 0;
-
-for (let i = 0; i < products.length; i++) {
-  if (products[i].price <= 1500) {
-    cheapestGoods++;
-    console.log("cheapproducts:", cheapestGoods, products[i].name);
-  }
-}
 
 let lessQuantity = 0;
 
@@ -405,13 +389,19 @@ for (let i = 0; i < set2.length; i++) {
   }
 }
 
-for (let r = 0 ; r < set2.length; r++) {
-  for (let c = 0 ; c < set2.length; c++) {
-    console.log(commonElements[r][c]);
-    
+for (let r = 0 ; r < set.length; r++) {
+  for (let c = r + 1 ; c < set.length; c++) {
+    if(set[r] > set[c]) {
+      let temp = set[r] ;  
+      set[r]= set[c];
+      set[c]= temp;
+    }
+    commonElements++;
   }
 }
+console.log('count:', commonElements);
 
+console.log('sort:', set);
 
 
 

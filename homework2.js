@@ -111,11 +111,11 @@ let arr4 = [
 // console.log(arr4[0][1]);
 // console.log(arr4[0][2]);
 
-for (let r = 0; r < arr4.length; r++) {
-  for (let c = 0; c < arr4.length; c++) {
-    console.log(arr4[r][c]);
-  }
-}
+// for (let r = 0; r < arr4.length; r++) {
+//   for (let c = 0; c < arr4.length; c++) {
+//     console.log(arr4[r][c]);
+//   }
+// }
 
 let ar1 = [2, 1, 9, 5, 7];
 let count1 = 0;

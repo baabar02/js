@@ -107,6 +107,7 @@ let arr4 = [
   [3, 4, 5],
   [6, 7, 8],
 ];
+
 // console.log(arr4[0][0]);
 // console.log(arr4[0][1]);
 // console.log(arr4[0][2]);

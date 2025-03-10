@@ -527,6 +527,92 @@ sortSalary = (employees) => {
 }
 
 sortSalary(employees)
+console.log("String");
+
+const text = "Hello Pinecone. Welcome to the world of JavaScript.";
+console.log(text[0]);
+
+for (let i = 0; i < text.length; i++) {
+  console.log(text[i]);
+}
+
+for (let char of text) {
+  console.log(char);
+}
+
+for (let i in text) {
+  console.log(text[i]);
+}
+
+console.log(text.charAt(0));
+console.log(text.charCodeAt(0));
+console.log(text.includes("Pinecone"));
+
+const str = "   Hello Pinecone Academy";
+// TRIM, Replace, Split,  Substring,  Concat,
+console.log(str);
+console.log(str.trim());
+
+const newStr = str.replace("Hello", "Welcome");
+console.log(newStr);
+console.log(str);
+
+const arr = str.trim().replace("Hello", "Welcome").toLowerCase().split(" ");
+const subStr = str.substring(6, 12);
+
+console.log(subStr);
+console.log(arr);
+const i = str.indexOf("Pineconee");
+console.log(i);
+console.log(str.substring(i, i + 8));
+
+const str1 = "Hello";
+const str2 = "Pinecone";
+
+// 1. Өгөгдсөн string-үүдийг нэгтгэх функц бич.
+
+const myConcat = (str1, str2) => {
+  console.log(str1, str2);
+  return str1 + str2;
+};
+// rest parameter
+const myConcat1 = (...params) => {
+  const res = "";
+  //   for (let i = 0; i < params.length; i++) {
+  //     res = res + params[i];
+  //   }
+  for (let param of params) {
+    res = res + param;
+  }
+  return res;
+};
+
+const result = myConcat("Hello", "Pinecone", "Academy");
+console.log(result);
+
+// includes
+// 2. Өгөгдсөн string-д өгөгдсөн тэмдэгт байгаа эсэхийг шалгах функц бич.
+const isExistChar = (text, char) => {
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === char) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const indexOf = (text, char) => {
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === char) {
+      return i;
+    }
+  }
+  return -1;
+};
+const res = indexOf("Hello Pinecone", "K");
+console.log("Hello Pinecone");
+console.log(res);
+// 3. Өгөгдсөн string-д өгөгдсөн тэмдэгт байгаа тоог олох функц бич.
 
 // Ажилчдын нэрсийг дарааллаар хэвлэх функц бич.
 // Ажилчдын дундаж насыг олох функц бич.
